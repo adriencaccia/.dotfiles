@@ -1,0 +1,34 @@
+[global_config]
+  borderless = True
+  homogeneous_tabbar = False
+  scroll_tabbar = True
+  tab_position = hidden
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = adrien
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.36
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = FuraCode Nerd Font Medium 12
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[adrien]]
+    background_darkness = 0.33
+    cursor_color = "#aaaaaa"
+    font = FuraCode Nerd Font Medium 12
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
