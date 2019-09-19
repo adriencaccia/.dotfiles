@@ -77,6 +77,7 @@ plugins=(
   docker
   docker-compose
   colored-man-pages
+  zsh-nvm
   zsh-syntax-highlighting
 )
 
