@@ -127,3 +127,8 @@ export NVM_DIR=~/.nvm
 alias c="clear"
 alias copy="xclip -sel clip <"
 alias l="exa -abghHliS"
+export GEM_HOME=~/.ruby/
+
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
