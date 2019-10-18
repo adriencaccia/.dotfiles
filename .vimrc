@@ -20,3 +20,5 @@ let g:gruvbox_contrast_dark = 'hard'
 
 " transparent background
 highlight Normal ctermbg=None
+
+map <C-b> :NERDTreeToggle<CR>
