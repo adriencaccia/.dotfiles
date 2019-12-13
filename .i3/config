@@ -236,3 +236,7 @@ for_window [class="Peek"] floating enable
 
 # disable screen saver
 exec_always --no-startup-id xset s off
+
+# keyboard layouts, french qwerty and azerty, switch with win+space
+exec_always "setxkbmap -layout us,fr -variant qwerty-fr,azerty"
+exec_always "setxkbmap -option 'grp:win_space_toggle'"
