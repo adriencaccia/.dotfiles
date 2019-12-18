@@ -243,3 +243,6 @@ exec_always --no-startup-id xset s off
 # keyboard layouts, french qwerty and azerty, switch with win+space
 exec_always "setxkbmap -layout us,fr -variant qwerty-fr,azerty"
 exec_always "setxkbmap -option 'grp:win_space_toggle'"
+
+# lock screen
+bindsym Mod4+l exec i3lock -i ~/Pictures/lock-screen.png
