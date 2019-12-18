@@ -134,3 +134,5 @@ export GEM_HOME=~/.ruby/
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
