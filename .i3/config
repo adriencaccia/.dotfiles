@@ -212,11 +212,14 @@ for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 0
 
-# Multi-screen screenshots with scrot
-bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
+
+exec mkdir -p ~/Pictures/screenshots
+
+# Multi-screen screenshots with maim
+bindsym --release Print exec maim ~/Pictures/screenshots/screenshot_$(date +"%d-%m-%Y-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # All screens
 
 # OSX-like area selection screenshots
-bindsym --release Control+Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
+bindsym --release Control+Shift+Print exec maim -s ~/Pictures/screenshots/screenshot_$(date +"%d-%m-%Y-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # Area selection
 
 # brightness
 bindsym XF86MonBrightnessUp exec brightness+
