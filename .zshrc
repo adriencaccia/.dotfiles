@@ -136,3 +136,4 @@ export GEM_HOME=~/.ruby/
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+export PATH="$PATH:$HOME/.symfony/bin"
