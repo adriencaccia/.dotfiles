@@ -128,6 +128,21 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# assign workspaces to screens
+workspace $ws1 output DP-3 eDP-1
+workspace $ws2 output eDP-1
+workspace $ws3 output DP-3 eDP-1
+workspace $ws4 output eDP-1
+workspace $ws5 output DP-3 eDP-1
+workspace $ws6 output eDP-1
+workspace $ws7 output DP-3 eDP-1
+workspace $ws8 output eDP-1
+workspace $ws9 output DP-3 eDP-1
+workspace $ws10 output eDP-1
+
+# go to other workspaces
+bindsym Mod1+Control+Right workspace next
+bindsym Mod1+Control+Left workspace prev
 
 # switch to workspace
 bindsym Mod1+1 workspace $ws1
