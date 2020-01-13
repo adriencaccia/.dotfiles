@@ -137,3 +137,11 @@ export GEM_HOME=~/.ruby/
 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export PATH="$PATH:$HOME/.symfony/bin"
+
+#pyenv setup
+export PATH="/home/$USER/.pyenv/bin:$PATH"
+if [ -z ${PROFILE_LOADED} ]; then
+    export PROFILE_LOADED=true
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
