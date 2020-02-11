@@ -251,6 +251,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # peek floating
 for_window [class="Peek"] floating enable
+for_window [class="Kite"] floating enable
+for_window [class="Nautilus"] floating enable, resize set 900 675, move position center
+for_window [class="Org.gnome.Characters"] floating enable
 
 # disable screen saver
 exec_always --no-startup-id xset s off
