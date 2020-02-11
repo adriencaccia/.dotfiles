@@ -264,3 +264,6 @@ exec_always "setxkbmap -option 'grp:win_space_toggle'"
 
 # lock screen
 bindsym Mod4+l exec i3lock -i ~/Pictures/lock-screen.png
+
+# controlling xrandr through a dmenu interface https://github.com/clementhannicq/dmenu-xrandr/
+bindsym Mod4+p exec dmenu-xrandr
