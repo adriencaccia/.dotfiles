@@ -129,6 +129,8 @@ export NVM_DIR=~/.nvm
 alias c="clear"
 alias copy="xclip -sel clip <"
 alias l="exa -abghHliS"
+alias gcfp="git commit --fixup"
+
 export GEM_HOME=~/.ruby/
 
 
