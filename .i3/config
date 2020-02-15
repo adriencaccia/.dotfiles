@@ -263,7 +263,8 @@ exec_always "setxkbmap -layout us,fr -variant qwerty-fr,azerty"
 exec_always "setxkbmap -option 'grp:win_space_toggle'"
 
 # lock screen
-bindsym Mod4+l exec i3lock -i ~/Pictures/lock-screen.png
+# lock with multimonitor blurred screenshot https://github.com/Jeremie-Chauvel/i3lock-fancy
+bindsym Mod4+l exec ~/.i3/i3lock-fancy-multimonitor/lock --blur=5x3
 
 # controlling xrandr through a dmenu interface https://github.com/clementhannicq/dmenu-xrandr/
 bindsym Mod4+p exec dmenu-xrandr
