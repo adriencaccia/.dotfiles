@@ -268,3 +268,6 @@ bindsym Mod4+l exec ~/.i3/i3lock-fancy-multimonitor/lock --blur=5x3 --no-text
 
 # controlling xrandr through a dmenu interface https://github.com/clementhannicq/dmenu-xrandr/
 bindsym Mod4+p exec dmenu-xrandr
+
+# i3-battery-popup
+exec_always --no-startup-id i3-battery-popup -n -L 20 -m " Low battery 🔋 Plug your 💻 🔌"""
