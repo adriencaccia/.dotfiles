@@ -38,7 +38,7 @@
 
     markup = full
 
-    format = "%a\n<b>%s</b>\n%b\n%p"
+    format = "<b>%s</b>\n%b\n%p"
 
     alignment = left
 
