@@ -90,16 +90,6 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time time date)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon nvm dir_writable dir virtualenv vcs)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=$'%F{green}\ufca4 %f'
-ZLE_RPROMPT_INDENT=0
-POWERLEVEL9K_MODE='nerdfont-complete'
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
