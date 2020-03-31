@@ -254,6 +254,7 @@ for_window [class="Peek"] floating enable
 for_window [class="Kite"] floating enable
 for_window [class="Nautilus"] floating enable, resize set 900 675, move position center
 for_window [class="Org.gnome.Characters"] floating enable
+for_window [class="zoom"] floating enable, resize set 1280 900
 
 # disable screen saver
 exec_always --no-startup-id xset s off
