@@ -90,6 +90,8 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+ZLE_RPROMPT_INDENT=0
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
