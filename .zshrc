@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+HISTSIZE=1000
+SAVEHIST=1000000000
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -129,6 +132,7 @@ alias c="clear"
 alias copy="xclip -sel clip <"
 alias l="exa -abghHliS"
 alias gcfp="git commit --fixup"
+alias gpr="EDITOR='code --wait' git pr"
 
 export GEM_HOME=~/.ruby/
 
@@ -147,5 +151,9 @@ if [ -z ${PROFILE_LOADED} ]; then
     eval "$(pyenv virtualenv-init -)"
 fi
 
+export PATH=/home/adrien/.nimble/bin:$PATH
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

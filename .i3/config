@@ -128,6 +128,19 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# # assign workspaces to screens
+# workspace $ws1 output DP-1-3 eDP-1-1
+# workspace $ws2 output eDP-1-1
+# workspace $ws3 output DP-1-3 eDP-1-1
+# workspace $ws4 output eDP-1-1
+# workspace $ws5 output DP-1-3 eDP-1-1
+# workspace $ws6 output eDP-1-1
+# workspace $ws7 output DP-1-3 eDP-1-1
+# workspace $ws8 output eDP-1-1
+# workspace $ws9 output DP-1-3 eDP-1-1
+# workspace $ws10 output eDP-1-1
+
+
 # assign workspaces to screens
 workspace $ws1 output DP-3 eDP-1
 workspace $ws2 output eDP-1
@@ -231,10 +244,10 @@ gaps outer 0
 exec mkdir -p ~/Pictures/screenshots
 
 # Multi-screen screenshots with maim
-bindsym --release Print exec maim ~/Pictures/screenshots/screenshot_$(date +"%d-%m-%Y-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # All screens
+bindsym --release Print exec maim ~/Pictures/screenshots/screenshot_$(date +"%Y-%m-%d-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # All screens
 
 # OSX-like area selection screenshots
-bindsym --release Control+Shift+Print exec maim -s ~/Pictures/screenshots/screenshot_$(date +"%d-%m-%Y-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # Area selection
+bindsym --release Control+Shift+Print exec maim -s ~/Pictures/screenshots/screenshot_$(date +"%Y-%m-%d-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # Area selection
 
 # brightness
 bindsym XF86MonBrightnessUp exec brightness+
@@ -250,7 +263,7 @@ exec_always --no-startup-id feh --bg-scale $HOME/Pictures/kai-oberhauser-BKAaLmT
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # peek floating
-for_window [class="Peek"] floating enable
+for_window [class="Peek"] floating enable, resize set 900 675, move position center
 for_window [class="Kite"] floating enable
 for_window [class="Nautilus"] floating enable, resize set 900 675, move position center
 for_window [class="Org.gnome.Characters"] floating enable
