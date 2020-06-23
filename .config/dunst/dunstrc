@@ -59,7 +59,7 @@
     max_icon_size = 64
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/Arc/status/48:/usr/share/icons/Arc/devices/48:/usr/share/icons/Adwaita/48x48/status/:/usr/share/icons/Adwaita/48x48/devices/
+    icon_path = /usr/share/icons/Arc/status/48:/usr/share/icons/Arc/devices/48:/usr/share/icons/Adwaita/48x48/status/:/usr/share/icons/Adwaita/48x48/devices/:/home/adrien/Documents/icons
 
     sticky_history = yes
 
