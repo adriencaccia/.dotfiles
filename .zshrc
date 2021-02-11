@@ -91,6 +91,7 @@ plugins=(
   colored-man-pages
   zsh-nvm
   zsh-syntax-highlighting
+  fzf-tab
 )
 
 ZLE_RPROMPT_INDENT=0
@@ -133,6 +134,7 @@ alias copy="xclip -sel clip <"
 alias l="exa -abghHliS"
 alias gcfp="git commit --fixup"
 alias gpr="EDITOR='code --wait' git pr"
+alias gpusup='git push --set-upstream upstream $(git_current_branch)'
 
 export GEM_HOME=~/.ruby/
 
@@ -145,11 +147,8 @@ export PATH="$PATH:$HOME/.symfony/bin"
 
 #pyenv setup
 export PATH="/home/$USER/.pyenv/bin:$PATH"
-if [ -z ${PROFILE_LOADED} ]; then
-    export PROFILE_LOADED=true
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-fi
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 export PATH=/home/adrien/.nimble/bin:$PATH
 
@@ -157,3 +156,12 @@ export PATH=/home/adrien/.nimble/bin:$PATH
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PATH="$PATH:$HOME/.poetry/bin"
+
+# make gh completion work https://github.com/cli/cli/issues/716#issuecomment-669596677
+if [ $commands[gh] ]; then
+  source <(gh completion --shell zsh)
+  compdef _gh gh
+  compdump
+fi
