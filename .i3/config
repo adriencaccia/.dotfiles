@@ -285,3 +285,6 @@ bindsym Mod4+p exec dmenu-xrandr
 
 # i3-battery-popup
 exec --no-startup-id i3-battery-popup -n -L 20 -m " Low battery 🔋 Plug your 💻 🔌"""
+
+# touchpad gestures
+exec_always --no-startup-id libinput-gestures-setup start
