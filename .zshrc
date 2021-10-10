@@ -165,3 +165,16 @@ if [ $commands[gh] ]; then
   compdef _gh gh
   compdump
 fi
+
+# spicetify
+export SPICETIFY_INSTALL="/home/adrien/spicetify-cli"
+export PATH="$SPICETIFY_INSTALL:$PATH"
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# increase key repeat rate
+xset r rate 400 25
