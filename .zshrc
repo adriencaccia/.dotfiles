@@ -178,3 +178,6 @@ export PATH="$HOME/.serverless/bin:$PATH"
 
 # increase key repeat rate
 xset r rate 400 25
+
+# https://github.com/nvbn/thefuck
+eval $(thefuck --alias)

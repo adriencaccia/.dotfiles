@@ -244,10 +244,11 @@ gaps outer 0
 exec mkdir -p ~/Pictures/screenshots
 
 # Multi-screen screenshots with maim
-bindsym --release Print exec maim ~/Pictures/screenshots/screenshot_$(date +"%Y-%m-%d-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # All screens
+bindsym --release Print exec flameshot full --clipboard --path ~/Pictures/screenshots
 
 # OSX-like area selection screenshots
-bindsym --release Control+Shift+Print exec maim -s ~/Pictures/screenshots/screenshot_$(date +"%Y-%m-%d-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # Area selection
+# bindsym --release Control+Shift+Print exec maim -s ~/Pictures/screenshots/screenshot_$(date +"%Y-%m-%d-%T").png && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1` # Area selection
+bindsym --release Control+Shift+Print exec flameshot gui --clipboard --path ~/Pictures/screenshots
 
 # brightness
 bindsym XF86MonBrightnessUp exec brightness+
@@ -262,12 +263,15 @@ exec_always --no-startup-id feh --bg-scale $HOME/Pictures/kai-oberhauser-BKAaLmT
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# peek floating
+# make certain apps floating by default
 for_window [class="Peek"] floating enable, resize set 900 675, move position center
 for_window [class="Kite"] floating enable
 for_window [class="Nautilus"] floating enable, resize set 900 675, move position center
+for_window [class="X-terminal-emulator"] floating enable, resize set 680 480, move position center
 for_window [class="Org.gnome.Characters"] floating enable
 for_window [class="zoom"] floating enable, resize set 1280 900
+for_window [class="copyq"] floating enable, resize set 1280 900, move position center
+for_window [class="flameshot"] floating enable, move position center
 
 # disable screen saver
 exec_always --no-startup-id xset s off
@@ -290,4 +294,4 @@ exec --no-startup-id i3-battery-popup -n -L 20 -m " Low battery ðŸ”‹ Plug your ð
 exec_always --no-startup-id libinput-gestures-setup start
 
 # load xbindkeys
-xbindkeys
+exec_always --no-startup-id xbindkeys
